@@ -1,4 +1,4 @@
-package domain;
+package org.liuyi.common.domain;
 
 import cn.hutool.core.lang.Snowflake;
 import cn.hutool.core.util.IdUtil;
