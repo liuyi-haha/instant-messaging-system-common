@@ -1,9 +1,9 @@
-package org.liuyi.common.domain;
+package org.liuyi.common.domain.object;
 
 import cn.hutool.core.lang.Snowflake;
 import cn.hutool.core.util.IdUtil;
 
-public class IdGenerator {
+public class RandomIdGenerator {
     private static final Snowflake SNOWFLAKE = IdUtil.getSnowflake();
     private static final String ALPHABET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     private static final int BASE = ALPHABET.length();
