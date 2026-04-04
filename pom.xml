@@ -10,7 +10,7 @@
     </parent>
     <groupId>org.liuyi</groupId>
     <artifactId>instant-messaging-system-common</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>instant-messaging-system-common</name>
     <description>instant-messaging-system-common</description>
     <url/>
