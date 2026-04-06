@@ -21,4 +21,6 @@ public abstract class Event {
     public String eventId() {
         return eventId;
     }
+
+    public abstract String getTopic();
 }
