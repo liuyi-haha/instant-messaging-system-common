@@ -1,26 +1,28 @@
 package org.liuyi.common.domain.event;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
+
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+
+@Data
+@SuperBuilder
+@NoArgsConstructor  // ⚠️ 必须！Jackson 反序列化需要
+@AllArgsConstructor
 public abstract class Event {
-    protected final String eventId;
-    protected final String occurredOn;
-    protected final String version;
+    @Builder.Default
+    protected String eventId = UUID.randomUUID().toString();
 
-    public Event() {
-        this("v1.0");
-    }
+    @Builder.Default
+    protected String occurredOn = LocalDateTime.now().toString();
 
-    public Event(String version) {
-        eventId = UUID.randomUUID().toString();
-        occurredOn = LocalDateTime.now().toString();
-        this.version = version;
-    }
-
-    public String eventId() {
-        return eventId;
-    }
+    @Builder.Default
+    protected String version = "v1.0";
 
     public abstract String getTopic();
 }
