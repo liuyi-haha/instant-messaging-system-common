@@ -5,7 +5,7 @@ import io.jsonwebtoken.security.Keys;
 
 import java.nio.charset.StandardCharsets;
 
-class JwtUtil {
+public class JwtUtil {
     private static final String SECRET = "mySimpleSecretKeyForJWT1234567890";
 
     // 生成 token
